@@ -13,7 +13,7 @@ WORKDIR /app
 RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y sharutils binutils libstdc++6:i386 libpam0g:i386 && ln -s /lib/i386-linux-gnu/libpam.so.0 /lib/libpam.so.0
 
 #RUN npm install -g nodemon .
-RUN npm config set registry https://registry.npmjs.org
+#RUN npm config set registry https://registry.npmjs.org
 
 #COPY pam-1.3.1-4.el8.i686.rpm /app/pam-1.3.1-4.el8.i686.rpm
 
