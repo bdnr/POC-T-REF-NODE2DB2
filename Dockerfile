@@ -9,12 +9,12 @@ FROM ubuntu:14.04
 RUN mkdir -p /app
 WORKDIR /app
 
-# DB2 prereqs (also installing sharutils package as we use the utility uuencode to generate password - all others are required for the DB2 Client) .
+# DB2 prereqs (also installing sharutils package as we use the utility uuencode to generate password - all others are required for the DB2 Client) 
 RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y sharutils binutils libstdc++6:i386 libpam0g:i386 && ln -s /lib/i386-linux-gnu/libpam.so.0 /lib/libpam.so.0
 
 #RUN npm install -g nodemon .
 RUN npm config set registry https://registry.npmjs.org
-COPY package.json /app/package.json
+
 #COPY pam-1.3.1-4.el8.i686.rpm /app/pam-1.3.1-4.el8.i686.rpm
 
 #RUN npm install \
@@ -79,6 +79,7 @@ RUN cp /usr/glibc-compat/lib/libcrypt.* /usr/lib/ \
 
 ENV PATH=${PATH}:/usr/glibc-compat/lib
 
+#COPY package.json /app/
 COPY . /app
 #RUN chmod 755 /app/result_live_chk.sh
 
