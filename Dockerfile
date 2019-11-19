@@ -14,7 +14,7 @@ RUN dpkg --add-architecture i386 \
 && apt-get update \
 && apt-get install -y sharutils binutils libstdc++6:i386 libpam0g:i386 \
 && ln -s /lib/i386-linux-gnu/libpam.so.0 /lib/libpam.so.0 \
-&& apt-get install --unsafe-perm ibm_db2 
+&& apt-get install ibm_db2 
 
 #RUN npm install -g nodemon .
 #RUN npm config set registry https://registry.npmjs.org
