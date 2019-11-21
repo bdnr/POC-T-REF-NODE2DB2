@@ -39,8 +39,8 @@ ibmdb.open("DRIVER=DB2;DATABASE=TESTDB;HOSTNAME=db2-wmj;UID=testdb;PWD=db234;POR
 */
 
 
-console.log("500 Connect to DB2 varianta C");//---------------------------------
 /*
+console.log("500 Connect to DB2 varianta C");//---------------------------------
 const db = require('/QOpenSys/QIBM/ProdData/OPS/Node6/os400/db2i/lib/db2a')
 
 const dbconn = new db.dbconn()
